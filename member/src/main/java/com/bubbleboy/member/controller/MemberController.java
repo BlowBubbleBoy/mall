@@ -4,12 +4,9 @@ import java.util.Arrays;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
+import com.bubbleboy.member.feign.MemberFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.bubbleboy.member.entity.MemberEntity;
 import com.bubbleboy.member.service.MemberService;
@@ -30,6 +27,19 @@ import com.bubbleboy.common.utils.R;
 public class MemberController {
     @Autowired
     private MemberService memberService;
+
+    @Autowired
+    private MemberFeignService memberFeignService;
+
+    @RequestMapping("/getMembers")
+    public R getMembers(){
+        MemberEntity memberEntity = new MemberEntity();
+        memberEntity.setNickname("张三");
+
+        R coupons = memberFeignService.getCoupons();
+        return R.ok().put("member",memberEntity).put("coupons",coupons);
+
+    }
 
     /**
      * 列表

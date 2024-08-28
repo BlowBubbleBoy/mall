@@ -1,3 +1,6 @@
+server:
+  port: 7002
+
 spring:
   datasource:
     #MySQL配置
@@ -5,6 +8,12 @@ spring:
     url: jdbc:mysql://124.222.203.107:3306/gulimall_pms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: root
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  application:
+    name: product
 
 
 mybatis-plus:
