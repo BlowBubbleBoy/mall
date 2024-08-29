@@ -14,7 +14,7 @@ spring:
         server-addr: localhost:8848
   config:
     import:
-      - nacos:myconfig.yaml?refreshEnabled=true
+      - optional:nacos:myconfig.yaml?refreshEnabled=true
 
   application:
     name: coupon
