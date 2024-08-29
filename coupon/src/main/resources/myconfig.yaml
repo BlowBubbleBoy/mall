@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: coupon
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        namespace: ce67426c-f842-4bbe-9749-72b2069863ec

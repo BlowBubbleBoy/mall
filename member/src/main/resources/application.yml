@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     #MySQL配置
-    driverClassName: com.mysql.jdbc.Driver
+    driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://124.222.203.107:3306/gulimall_ums?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: root
@@ -22,9 +22,3 @@ mybatis-plus:
     db-config:
       id-type: auto
 
-logging:
-  level:
-    com:
-      bubbleboy:
-        member:
-          feign:

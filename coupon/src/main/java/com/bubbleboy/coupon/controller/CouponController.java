@@ -5,6 +5,8 @@ import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import com.bubbleboy.coupon.entity.CouponEntity;
@@ -23,9 +25,13 @@ import com.bubbleboy.common.utils.R;
  */
 @RestController
 @RequestMapping("coupon/coupon")
+@RefreshScope
 public class CouponController {
     @Autowired
     private CouponService couponService;
+
+    @Value("${coupon.user.name}")
+    private String name;
 
     @RequestMapping("/getCoupons")
     public R getCoupons(){
@@ -33,6 +39,11 @@ public class CouponController {
         couponEntity.setCouponName("1百万的兰博基尼五元优惠券");
         return R.ok().put("coupons",Arrays.asList(couponEntity));
 
+    }
+
+    @GetMapping("/testConfig")
+    public R testConfig(){
+        return R.ok("config test success！" + this.name);
     }
 
     /**

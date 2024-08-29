@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     #MySQL配置
-    driverClassName: com.mysql.jdbc.Driver
+    driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://124.222.203.107:3306/gulimall_sms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: root
@@ -12,6 +12,10 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+  config:
+    import:
+      - nacos:myconfig.yaml?refreshEnabled=true
+
   application:
     name: coupon
 
@@ -21,4 +25,6 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: auto
+
+
 
