@@ -1,0 +1,20 @@
+server:
+  port: 88
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    gateway:
+      mvc:
+        routes:
+          - id: query_route
+            uri: https://qq.com
+            predicates:
+              - Query=green
+  config:
+    import:
+      - optional:nacos:gateway-config.yaml?refreshEnabled=true
