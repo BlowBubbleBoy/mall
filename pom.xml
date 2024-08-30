@@ -11,14 +11,15 @@
 	<packaging>pom</packaging>
 
 	<modules>
+		<module>common</module>
 		<module>coupon</module>
 		<module>member</module>
 		<module>order</module>
 		<module>product</module>
 		<module>ware</module>
+		<module>gateway</module>
 		<module>renren-fast</module>
 		<module>renren-generator</module>
-		<module>common</module>
 	</modules>
 
 	<properties>
@@ -36,6 +37,7 @@
 		<mysql-connector-java.version>8.0.17</mysql-connector-java.version>
 		<servlet-api.version>2.5</servlet-api.version>
 		<jackson-databind.version>2.17.2</jackson-databind.version>
+		<jackson-core.version>2.17.2</jackson-core.version>
 		<spring-boot-maven-plugin.version>3.3.3</spring-boot-maven-plugin.version>
 	</properties>
 
@@ -58,6 +60,11 @@
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-parent</artifactId>
+				<version>${spring-boot-starter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter</artifactId>
 				<version>${spring-boot-starter.version}</version>
 			</dependency>
 			<dependency>
@@ -104,6 +111,11 @@
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-databind</artifactId>
 				<version>${jackson-databind.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${jackson-core.version}</version>
 			</dependency>
 		</dependencies>
 

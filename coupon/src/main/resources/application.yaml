@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: coupon
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  config:
+    import:
+      - optional:nacos:coupon-config.yaml?refreshEnabled=true

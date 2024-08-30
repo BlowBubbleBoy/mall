@@ -30,7 +30,7 @@ public class CouponController {
     @Autowired
     private CouponService couponService;
 
-//    @Value("${coupon.user.name}")
+    @Value("${coupon.user.name}")
     private String name;
 
     @RequestMapping("/getCoupons")
