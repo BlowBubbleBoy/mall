@@ -15,6 +15,11 @@ spring:
             uri: https://qq.com
             predicates:
               - Query=green
+
+          - id: path_route
+            uri: lb://renren-fast
+            predicates:
+              - Path=/renren-fast/{segment},/blue/{segment}
   config:
     import:
       - optional:nacos:gateway-config.yaml?refreshEnabled=true
