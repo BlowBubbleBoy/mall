@@ -7,4 +7,4 @@ spring:
         server-addr: localhost:8848
   config:
     import:
-      - optional:nacos:order-config.yaml?refreshEnabled=true
+      - optional:nacos:order-myconfig.yaml?refreshEnabled=true
