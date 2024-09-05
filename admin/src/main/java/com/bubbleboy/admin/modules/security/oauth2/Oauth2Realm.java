@@ -22,8 +22,6 @@ import java.util.Set;
 
 /**
  * 认证
- *
- * @author Mark sunlightcs@gmail.com
  */
 @Component
 @AllArgsConstructor

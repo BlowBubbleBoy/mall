@@ -19,8 +19,6 @@ import java.io.Serializable;
 
 /**
  * 云存储配置信息
- *
- * @author Mark sunlightcs@gmail.com
  */
 @Data
 @Schema(title = "云存储配置信息")

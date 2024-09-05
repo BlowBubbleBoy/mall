@@ -17,8 +17,6 @@ import java.util.Map;
 
 /**
  *  CRUD基础服务类
- *
- * @author Mark sunlightcs@gmail.com
  */
 public abstract class CrudServiceImpl<M extends BaseMapper<T>, T, D> extends BaseServiceImpl<M, T> implements CrudService<T, D> {
 

@@ -1,10 +1,3 @@
-/**
- * Copyright (c) 2018 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
 
 package com.bubbleboy.common.page;
 
@@ -18,8 +11,6 @@ import java.util.List;
 
 /**
  * 分页工具类
- *
- * @author Mark sunlightcs@gmail.com
  */
 @Data
 @Schema(title = "分页数据")

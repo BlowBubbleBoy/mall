@@ -9,8 +9,6 @@ import java.util.Map;
 
 /**
  *  CRUD基础服务接口
- *
- * @author Mark sunlightcs@gmail.com
  */
 public interface CrudService<T, D> extends BaseService<T> {
 

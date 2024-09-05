@@ -1,10 +1,3 @@
-/**
- * Copyright (c) 2018 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
 
 package com.bubbleboy.admin.modules.security.config;
 
@@ -27,8 +20,6 @@ import java.util.Map;
 
 /**
  * Shiro的配置文件
- *
- * @author Mark sunlightcs@gmail.com
  */
 @Configuration
 public class ShiroConfig {

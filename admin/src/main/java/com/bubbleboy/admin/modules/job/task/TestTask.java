@@ -1,10 +1,3 @@
-/**
- * Copyright (c) 2018 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
 
 package com.bubbleboy.admin.modules.job.task;
 
@@ -16,8 +9,6 @@ import org.springframework.stereotype.Component;
  * 测试定时任务(演示Demo，可删除)
  *
  * testTask为spring bean的名称
- *
- * @author Mark sunlightcs@gmail.com
  */
 @Component("testTask")
 public class TestTask implements ITask{

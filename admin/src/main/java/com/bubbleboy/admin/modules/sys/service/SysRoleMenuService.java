@@ -1,10 +1,3 @@
-/**
- * Copyright (c) 2018 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
 
 package com.bubbleboy.admin.modules.sys.service;
 
@@ -17,7 +10,6 @@ import java.util.List;
 /**
  * 角色与菜单对应关系
  * 
- * @author Mark sunlightcs@gmail.com
  */
 public interface SysRoleMenuService extends BaseService<SysRoleMenuEntity> {
 

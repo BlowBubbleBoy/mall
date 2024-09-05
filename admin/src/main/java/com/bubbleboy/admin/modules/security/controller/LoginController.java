@@ -39,8 +39,6 @@ import java.util.Date;
 
 /**
  * 登录
- *
- * @author Mark sunlightcs@gmail.com
  */
 @RestController
 @Tag(name = "登录管理")

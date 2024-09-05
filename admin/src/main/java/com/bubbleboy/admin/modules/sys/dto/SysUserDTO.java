@@ -1,10 +1,3 @@
-/**
- * Copyright (c) 2018 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
 
 package com.bubbleboy.admin.modules.sys.dto;
 
@@ -28,9 +21,6 @@ import java.util.List;
 
 /**
  * 用户管理
- *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
  */
 @Data
 @Schema(title = "用户管理")

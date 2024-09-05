@@ -32,9 +32,6 @@ import java.util.Map;
 
 /**
  * 登录日志
- *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
  */
 @RestController
 @RequestMapping("sys/log/login")

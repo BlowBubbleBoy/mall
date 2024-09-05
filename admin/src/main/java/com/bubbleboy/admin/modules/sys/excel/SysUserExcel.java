@@ -14,9 +14,6 @@ import java.util.Date;
 
 /**
  * 用户管理
- *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
  */
 @Data
 public class SysUserExcel {

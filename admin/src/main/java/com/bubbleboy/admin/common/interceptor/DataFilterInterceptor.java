@@ -1,10 +1,3 @@
-/**
- * Copyright (c) 2018 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
 
 package com.bubbleboy.admin.common.interceptor;
 
@@ -28,8 +21,6 @@ import java.util.Map;
 
 /**
  * 数据过滤
- *
- * @author Mark sunlightcs@gmail.com
  */
 public class DataFilterInterceptor implements InnerInterceptor {
 

@@ -1,10 +1,3 @@
-/**
- * Copyright (c) 2018 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
 
 package com.bubbleboy.common.utils;
 
@@ -18,9 +11,6 @@ import java.util.List;
 
 /**
  * 树节点，所有需要实现树节点的，都需要继承该类
- *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
  */
  @Data
 public class TreeNode<T> implements Serializable {

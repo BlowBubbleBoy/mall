@@ -1,18 +1,8 @@
-/**
- * Copyright (c) 2018 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
 
 package com.bubbleboy.admin.modules.sys.enums;
 
 /**
  * 超级管理员枚举
- *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
  */
 public enum SuperAdminEnum {
     YES(1),

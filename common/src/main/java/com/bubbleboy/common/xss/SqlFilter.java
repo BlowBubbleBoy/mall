@@ -8,8 +8,6 @@ import com.bubbleboy.common.exception.RenException;
 
 /**
  * SQL过滤
- *
- * @author Mark sunlightcs@gmail.com
  */
 public class SqlFilter {
 

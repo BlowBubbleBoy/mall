@@ -1,10 +1,3 @@
-/**
- * Copyright (c) 2018 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
 
 package com.bubbleboy.common.exception;
 
@@ -13,9 +6,6 @@ package com.bubbleboy.common.exception;
  * <p>
  * 如：10001（10代表系统模块，001代表业务代码）
  * </p>
- *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
  */
 public interface ErrorCode {
     int INTERNAL_SERVER_ERROR = 500;

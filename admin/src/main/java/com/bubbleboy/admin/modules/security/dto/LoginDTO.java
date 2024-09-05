@@ -1,10 +1,3 @@
-/**
- * Copyright (c) 2018 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
 
 package com.bubbleboy.admin.modules.security.dto;
 
@@ -18,8 +11,6 @@ import java.io.Serializable;
 
 /**
  * 登录表单
- *
- * @author Mark sunlightcs@gmail.com
  */
 @Data
 @Schema(title = "登录表单")

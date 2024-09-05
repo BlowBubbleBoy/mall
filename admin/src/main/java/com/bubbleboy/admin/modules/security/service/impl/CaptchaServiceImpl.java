@@ -18,8 +18,6 @@ import java.io.IOException;
 
 /**
  * 验证码
- *
- * @author Mark sunlightcs@gmail.com
  */
 @Service
 public class CaptchaServiceImpl implements CaptchaService {

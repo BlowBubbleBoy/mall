@@ -1,10 +1,3 @@
-/**
- * Copyright (c) 2018 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
 
 package com.bubbleboy.admin.modules.sys.entity;
 
@@ -17,9 +10,6 @@ import lombok.EqualsAndHashCode;
 
 /**
  * 角色数据权限
- *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
  */
 @Data
 @EqualsAndHashCode(callSuper=false)

@@ -19,9 +19,6 @@ package com.bubbleboy.admin.modules.security.password;
 
 /**
  * 密码工具类
- *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
  */
 public class PasswordUtils {
     private static final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();

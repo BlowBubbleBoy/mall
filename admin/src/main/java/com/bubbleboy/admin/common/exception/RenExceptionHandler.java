@@ -25,9 +25,6 @@ import java.util.Map;
 
 /**
  * 异常处理器
- *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
  */
 @Slf4j
 @RestControllerAdvice

@@ -28,8 +28,6 @@ import java.util.Set;
 
 /**
  * 菜单管理
- *
- * @author Mark sunlightcs@gmail.com
  */
 @RestController
 @RequestMapping("/sys/menu")

@@ -1,10 +1,3 @@
-/**
- * Copyright (c) 2018 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
 
 package com.bubbleboy.common.utils;
 
@@ -13,9 +6,6 @@ import org.springframework.context.i18n.LocaleContextHolder;
 
 /**
  * 国际化
- *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
  */
 public class MessageUtils {
     private static final MessageSource messageSource;

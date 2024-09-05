@@ -27,8 +27,6 @@ import java.util.Map;
 
 /**
  * 数据过滤，切面处理类
- *
- * @author Mark sunlightcs@gmail.com
  */
 @Aspect
 @Component

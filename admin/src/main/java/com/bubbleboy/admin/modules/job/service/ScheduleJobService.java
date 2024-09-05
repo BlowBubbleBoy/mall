@@ -1,10 +1,3 @@
-/**
- * Copyright (c) 2018 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
 
 package com.bubbleboy.admin.modules.job.service;
 
@@ -17,8 +10,6 @@ import java.util.Map;
 
 /**
  * 定时任务
- *
- * @author Mark sunlightcs@gmail.com
  */
 public interface ScheduleJobService extends BaseService<ScheduleJobEntity> {
 

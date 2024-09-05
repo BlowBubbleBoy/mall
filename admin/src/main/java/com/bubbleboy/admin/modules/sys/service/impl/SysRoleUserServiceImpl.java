@@ -1,10 +1,3 @@
-/**
- * Copyright (c) 2018 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
 
 package com.bubbleboy.admin.modules.sys.service.impl;
 
@@ -19,9 +12,6 @@ import java.util.List;
 
 /**
  * 角色用户关系
- *
- * @author Mark sunlightcs@gmail.com
- * @since 1.0.0
  */
 @Service
 public class SysRoleUserServiceImpl extends BaseServiceImpl<SysRoleUserDao, SysRoleUserEntity> implements SysRoleUserService {
