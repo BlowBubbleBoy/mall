@@ -86,7 +86,7 @@ public interface Constant {
          */
         NORMAL(1);
 
-        private int value;
+        private final int value;
 
         ScheduleStatus(int value) {
             this.value = value;
@@ -114,7 +114,7 @@ public interface Constant {
          */
         QCLOUD(3);
 
-        private int value;
+        private final int value;
 
         CloudService(int value) {
             this.value = value;

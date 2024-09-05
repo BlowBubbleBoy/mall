@@ -55,11 +55,7 @@ public class CaptchaServiceImpl implements CaptchaService {
         String captcha = getCache(uuid);
 
         //效验成功
-        if (code.equalsIgnoreCase(captcha)) {
-            return true;
-        }
-
-        return false;
+        return code.equalsIgnoreCase(captcha);
     }
 
     private void setCache(String key, String value) {

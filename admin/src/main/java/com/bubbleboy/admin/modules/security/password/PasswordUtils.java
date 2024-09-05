@@ -24,7 +24,7 @@ package com.bubbleboy.admin.modules.security.password;
  * @since 1.0.0
  */
 public class PasswordUtils {
-    private static PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    private static final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
     /**
      * 加密

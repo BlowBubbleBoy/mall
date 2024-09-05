@@ -1,10 +1,4 @@
-/**
- * Copyright (c) 2018 人人开源 All rights reserved.
- *
- * https://www.renren.io
- *
- * 版权所有，侵权必究！
- */
+
 
 package com.bubbleboy.common.utils;
 
@@ -22,7 +16,7 @@ import java.util.List;
  * @author Mark sunlightcs@gmail.com
  */
 public class ConvertUtils {
-    private static Logger logger = LoggerFactory.getLogger(ConvertUtils.class);
+    private static final Logger logger = LoggerFactory.getLogger(ConvertUtils.class);
 
     public static <T> T sourceToTarget(Object source, Class<T> target){
         if(source == null){

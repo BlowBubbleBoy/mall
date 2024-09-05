@@ -24,7 +24,7 @@ public enum MenuTypeEnum {
      */
     BUTTON(1);
 
-    private int value;
+    private final int value;
 
     MenuTypeEnum(int value) {
         this.value = value;

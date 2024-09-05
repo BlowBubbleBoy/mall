@@ -69,10 +69,8 @@ public class XssUtils extends Safelist {
     }
 
     public static void main(String[] args) {
-        StringBuilder html = new StringBuilder();
-        html.append("<a href=\"https://www.renren.io\" target=\"_blank\">人人开源</a>");
 
-        System.out.println(filter(html.toString()));
+        System.out.println(filter("<a href=\"https://www.renren.io\" target=\"_blank\">人人开源</a>"));
     }
 
 }

@@ -18,7 +18,7 @@ import org.springframework.context.i18n.LocaleContextHolder;
  * @since 1.0.0
  */
 public class MessageUtils {
-    private static MessageSource messageSource;
+    private static final MessageSource messageSource;
     static {
         messageSource = (MessageSource)SpringContextUtils.getBean("messageSource");
     }

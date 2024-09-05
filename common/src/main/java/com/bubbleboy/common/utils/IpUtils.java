@@ -20,7 +20,7 @@ import org.slf4j.LoggerFactory;
  * @author Mark sunlightcs@gmail.com
  */
 public class IpUtils {
-	private static Logger logger = LoggerFactory.getLogger(IpUtils.class);
+	private static final Logger logger = LoggerFactory.getLogger(IpUtils.class);
 
 	/**
 	 * 获取IP地址
