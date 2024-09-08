@@ -2,9 +2,21 @@ spring:
   application:
     name: gateway
   cloud:
-    nacos:
+    gateway:
+      routes:
+        - id: admin_router
+          uri: lb://admin
+          predicates:
+            - Path=/api/**
+          filters:
+            - RewritePath=/api/?(?<segment>.*), /admin/$\{segment}
+  nacos:
       discovery:
         server-addr: localhost:8848
   config:
     import:
       - optional:nacos:gateway-myconfig.yaml?refreshEnabled=true
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG

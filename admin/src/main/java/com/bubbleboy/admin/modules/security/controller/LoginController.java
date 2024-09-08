@@ -1,4 +1,4 @@
- 
+
 
 package com.bubbleboy.admin.modules.security.controller;
 
@@ -29,10 +29,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpHeaders;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.Date;
@@ -52,7 +49,7 @@ public class LoginController {
     @GetMapping("captcha")
     @Operation(summary = "验证码")
     @Parameter(in = ParameterIn.QUERY, ref = "string", name = "uuid", required = true)
-    public void captcha(HttpServletResponse response, String uuid) throws IOException {
+    public void captcha(HttpServletResponse response, @RequestParam("uuid") String uuid) throws IOException {
         //uuid不能为空
         AssertUtils.isBlank(uuid, ErrorCode.IDENTIFIER_NOT_NULL);
 

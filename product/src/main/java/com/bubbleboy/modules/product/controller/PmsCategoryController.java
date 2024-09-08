@@ -11,6 +11,7 @@ import com.bubbleboy.common.validator.group.AddGroup;
 import com.bubbleboy.common.validator.group.DefaultGroup;
 import com.bubbleboy.common.validator.group.UpdateGroup;
 import com.bubbleboy.modules.product.dto.PmsCategoryDTO;
+import com.bubbleboy.modules.product.entity.PmsCategoryEntity;
 import com.bubbleboy.modules.product.excel.PmsCategoryExcel;
 import com.bubbleboy.modules.product.service.PmsCategoryService;
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -38,6 +39,15 @@ import java.util.Map;
 public class PmsCategoryController {
     @Autowired
     private PmsCategoryService pmsCategoryService;
+
+    @GetMapping("/tree/list")
+    @Operation(summary = "三级分类")
+    public Result<List<PmsCategoryEntity>> treeList(){
+
+        List<PmsCategoryEntity> treeList= pmsCategoryService.treeList();
+
+        return new Result<List<PmsCategoryEntity>>().ok(treeList);
+    }
 
     @GetMapping("page")
     @Operation(summary = "分页")

@@ -1,4 +1,4 @@
- 
+
 
 package com.bubbleboy.admin.modules.sys.controller;
 
@@ -59,7 +59,7 @@ public class SysMenuController {
     @Operation(summary = "列表")
     @Parameter(name = "type", description = "菜单类型 0：菜单 1：按钮  null：全部", in = ParameterIn.QUERY, ref = "int")
     @RequiresPermissions("sys:menu:list")
-    public Result<List<SysMenuDTO>> list(Integer type) {
+    public Result<List<SysMenuDTO>> list(@RequestParam(value = "type", required = false, defaultValue = "0") Integer type) {
         List<SysMenuDTO> list = sysMenuService.getAllMenuList(type);
 
         return new Result<List<SysMenuDTO>>().ok(list);

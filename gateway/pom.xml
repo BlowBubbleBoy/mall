@@ -9,16 +9,29 @@
     </parent>
 
     <artifactId>gateway</artifactId>
-    <name>gateway</name>
-    <description>gateway</description>
+    <version>0.0.1-SNAPSHOT</version>
+
+
 
     <dependencies>
+
         <dependency>
-            <groupId>com.bubbleboy</groupId>
-            <artifactId>common</artifactId>
-            <version>1.0.1</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
     </dependencies>
+
 
     <build>
         <plugins>

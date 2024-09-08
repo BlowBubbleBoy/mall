@@ -1,6 +1,8 @@
 <template>
-  <el-dialog v-model="visible" :title="!dataForm.id ? '新增' : '修改'" :close-on-click-modal="false" :close-on-press-escape="false">
-    <el-form :model="dataForm" :rules="rules" ref="dataFormRef" @keyup.enter="dataFormSubmitHandle()" label-width="120px">
+  <el-dialog v-model="visible" :title="!dataForm.id ? '新增' : '修改'" :close-on-click-modal="false"
+    :close-on-press-escape="false">
+    <el-form :model="dataForm" :rules="rules" ref="dataFormRef" @keyup.enter="dataFormSubmitHandle()"
+      label-width="120px">
       <el-form-item prop="menuType" label="类型">
         <el-radio-group v-model="dataForm.menuType" :disabled="!!dataForm.id">
           <el-radio :label="0">菜单</el-radio>
@@ -11,16 +13,20 @@
         <el-input v-model="dataForm.name" placeholder="名称"></el-input>
       </el-form-item>
       <el-form-item prop="parentName" label="上级菜单" class="menu-list">
-        <el-popover ref="menuListPopover" placement="bottom-start" trigger="click" :width="400" popper-class="popover-pop">
+        <el-popover ref="menuListPopover" placement="bottom-start" trigger="click" :width="400"
+          popper-class="popover-pop">
           <template v-slot:reference>
             <el-input v-model="dataForm.parentName" :readonly="true" placeholder="上级菜单">
               <template v-slot:suffix>
-                <el-icon v-if="dataForm.pid !== '0'" @click.stop="deptListTreeSetDefaultHandle()" class="el-input__icon"><circle-close /></el-icon
-              ></template>
+                <el-icon v-if="dataForm.pid !== '0'" @click.stop="deptListTreeSetDefaultHandle()"
+                  class="el-input__icon"><circle-close /></el-icon></template>
             </el-input>
           </template>
           <div class="popover-pop-body">
-            <el-tree :data="menuList" :props="{ label: 'name', children: 'children' }" node-key="id" ref="menuListTree" :highlight-current="true" :expand-on-click-node="false" accordion @current-change="menuListTreeCurrentChangeHandle"> </el-tree>
+            <el-tree :data="menuList" :props="{ label: 'name', children: 'children' }" node-key="id" ref="menuListTree"
+              :highlight-current="true" :expand-on-click-node="false" accordion
+              @current-change="menuListTreeCurrentChangeHandle">
+            </el-tree>
           </div>
         </el-popover>
       </el-form-item>
@@ -40,12 +46,17 @@
         <el-input v-model="dataForm.permissions" placeholder="多个用逗号分隔，如：sys:menu:save,sys:menu:update"></el-input>
       </el-form-item>
       <el-form-item v-if="dataForm.menuType === 0" prop="icon" label="图标" class="icon-list">
-        <el-popover ref="iconListPopover" placement="top-start" trigger="click" popper-class="popover-pop mod-sys__menu-icon-popover">
-          <template v-slot:reference> <el-input v-model="dataForm.icon" :readonly="true" placeholder="图标"></el-input></template>
+        <el-popover ref="iconListPopover" placement="top-start" trigger="click"
+          popper-class="popover-pop mod-sys__menu-icon-popover">
+          <template v-slot:reference> <el-input v-model="dataForm.icon" :readonly="true"
+              placeholder="图标"></el-input></template>
           <div class="mod-sys__menu-icon-inner">
             <div class="mod-sys__menu-icon-list">
-              <el-button v-for="(item, index) in iconList" :key="index" @click="iconListCurrentChangeHandle(item)" :class="{ 'is-active': dataForm.icon === item }">
-                <svg class="icon-svg" aria-hidden="true"><use :xlink:href="`#${item}`"></use></svg>
+              <el-button v-for="(item, index) in iconList" :key="index" @click="iconListCurrentChangeHandle(item)"
+                :class="{ 'is-active': dataForm.icon === item }">
+                <svg class="icon-svg" aria-hidden="true">
+                  <use :xlink:href="`#${item}`"></use>
+                </svg>
               </el-button>
             </div>
           </div>
@@ -198,32 +209,40 @@ defineExpose({
 .el-popover.el-popper {
   overflow-x: hidden;
 }
+
 .mod-sys__menu {
+
   .menu-list,
   .icon-list {
+
     .el-input__inner,
     .el-input__suffix {
       cursor: pointer;
     }
   }
+
   &-icon-popover {
     width: 458px !important;
     overflow-y: hidden !important;
   }
+
   &-icon-inner {
     width: 100%;
     max-height: 260px;
     overflow-x: hidden;
     overflow-y: auto;
   }
+
   &-icon-list {
     width: 458px !important;
     padding: 0;
     margin: -8px 0 0 -8px;
-    > .el-button {
+
+    >.el-button {
       padding: 8px;
       margin: 8px 0 0 8px;
-      > span {
+
+      >span {
         display: inline-block;
         vertical-align: middle;
         width: 18px;

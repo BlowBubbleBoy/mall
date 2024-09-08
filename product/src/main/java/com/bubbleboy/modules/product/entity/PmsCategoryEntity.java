@@ -1,11 +1,10 @@
 package com.bubbleboy.modules.product.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.media.SchemaProperty;
 import lombok.Data;
 
-import java.util.Date;
+import java.util.List;
 
 /**
  * 商品三级分类
@@ -53,4 +52,7 @@ public class PmsCategoryEntity {
      * 商品数量
      */
 	private Integer productCount;
+
+    @TableField(exist = false)
+    private List<PmsCategoryEntity> children;
 }

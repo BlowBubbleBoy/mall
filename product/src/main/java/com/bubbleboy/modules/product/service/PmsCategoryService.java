@@ -4,6 +4,8 @@ import com.bubbleboy.common.service.CrudService;
 import com.bubbleboy.modules.product.dto.PmsCategoryDTO;
 import com.bubbleboy.modules.product.entity.PmsCategoryEntity;
 
+import java.util.List;
+
 /**
  * 商品三级分类
  *
@@ -12,4 +14,5 @@ import com.bubbleboy.modules.product.entity.PmsCategoryEntity;
  */
 public interface PmsCategoryService extends CrudService<PmsCategoryEntity, PmsCategoryDTO> {
 
+    List<PmsCategoryEntity> treeList();
 }
